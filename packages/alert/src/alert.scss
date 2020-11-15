@@ -1,0 +1,46 @@
+@import '@/style/global.scss';
+
+@mixin Color($color,$background,$border) {
+  color: $color;
+  background: $background;
+  border-color: $border;
+}
+
+.as-alert {
+  font-size: $fontSize;
+  color: $color;
+  border-radius: $borderRadius;
+  padding: $padding;
+  background: $background;
+  margin: 100px auto;
+  width: 300px;
+}
+// 默认border
+.as-alert__border_left {
+  border-left: 8px solid $borderColor;
+}
+.as-alert__border_top {
+  border-top: 8px solid $borderColor;
+}
+.as-alert__border_right {
+  border-right: 8px solid $borderColor;
+}
+.as-alert__border_bottom {
+  border-bottom: 8px solid $borderColor;
+}
+// color:red
+.red {
+  @include Color($colorWhite, $backgroundRed, $borderRed)
+}
+// color:yellow
+.yellow {
+  @include Color($colorWhite, $backgroundYellow, $borderYellow)
+}
+// color:green
+.green {
+  @include Color($colorWhite, $backgroundGreen, $borderGreen)
+}
+// color:blue
+.blue {
+  @include Color($colorWhite, $backgroundBlue, $borderBlue)
+}
