@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <as-alert :options="options"></as-alert>
+    <ac-alert :options="options"></ac-alert>
   </div>
 </template>
 
@@ -10,8 +10,9 @@ export default {
   data() {
     return {
       options: {
-        border: 'left',
-        color: 'blue',
+        color: 'green',
+        type: 'success',
+        message: 'Success Tips',
       },
     }
   },

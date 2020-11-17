@@ -1,7 +1,15 @@
 <template>
-  <div class="as-alert" :class="baseCalculate">
-    <div class="as-alert__wrapper">
-      <div class="as-alert__content">Im an Alert Usage Example</div>
+  <div class="ac-alert" :class="baseCalculate">
+    <div class="ac-alert__wrapper">
+      <div class="ac-alert__content">
+        <!-- 缺少 svg icon -->
+        <div class="ac-alert_mode">
+          <div class="ac-alert_mode_text">
+            <div class="ac-alert_mode_text_title"></div>
+            <div class="ac-alert_mode_text_description"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -9,7 +17,7 @@
 <script>
 require('./alert.scss')
 export default {
-  name: 'AsAlert',
+  name: 'AcAlert',
   props: {
     options: {
       type: Object,
@@ -28,12 +36,22 @@ export default {
         blue: 'blue',
       }
       const borderColor = {
-        left: 'as-alert__border_left',
-        top: 'as-alert__border_top',
-        right: 'as-alert__border_right',
-        bottom: 'as-alert__border_bottom',
+        left: 'ac-alert__border_left',
+        top: 'ac-alert__border_top',
+        right: 'ac-alert__border_right',
+        bottom: 'ac-alert__border_bottom',
       }
-      return [Color[this.options['color']], borderColor[this.options['border']]]
+      const type = {
+        success: 'success',
+        info: 'info',
+        warning: 'warning',
+        error: 'error',
+      }
+      return [
+        Color[this.options['color']],
+        borderColor[this.options['border']],
+        type[this.options['type']],
+      ]
     },
   },
 }

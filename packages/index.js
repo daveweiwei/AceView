@@ -1,7 +1,9 @@
 import Alert from './alert/index';
+import TextLoop from './textLoop'
 
 const components = [
-  Alert
+  Alert,
+  TextLoop
 ];
 
 const install = function (Vue, opts = {}) {
@@ -23,5 +25,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '1.0.1',
   install,
-  Alert
+  Alert,
+  TextLoop
 }

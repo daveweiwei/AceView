@@ -6,41 +6,46 @@
   border-color: $border;
 }
 
-.as-alert {
+.ac-alert {
   font-size: $fontSize;
   color: $color;
   border-radius: $borderRadius;
-  padding: $padding;
+  padding: 8px $padding;
   background: $background;
-  margin: 100px auto;
-  width: 300px;
+  vertical-align: middle;
+  margin: 0 10px;
 }
 // 默认border
-.as-alert__border_left {
+.ac-alert__border_left {
   border-left: 8px solid $borderColor;
 }
-.as-alert__border_top {
+.ac-alert__border_top {
   border-top: 8px solid $borderColor;
 }
-.as-alert__border_right {
+.ac-alert__border_right {
   border-right: 8px solid $borderColor;
 }
-.as-alert__border_bottom {
+.ac-alert__border_bottom {
   border-bottom: 8px solid $borderColor;
 }
 // color:red
 .red {
-  @include Color($colorWhite, $backgroundRed, $borderRed)
+  @include Color($color, $backgroundRed, $borderRed)
 }
 // color:yellow
 .yellow {
-  @include Color($colorWhite, $backgroundYellow, $borderYellow)
+  @include Color($color, $backgroundYellow, $borderYellow)
 }
 // color:green
 .green {
-  @include Color($colorWhite, $backgroundGreen, $borderGreen)
+  @include Color($color, $backgroundGreen, $borderGreen)
 }
 // color:blue
 .blue {
-  @include Color($colorWhite, $backgroundBlue, $borderBlue)
+  @include Color($color, $backgroundBlue, $borderBlue)
+}
+
+// success
+.success {
+  @include Color($colorWhite, $backgroundBlue, $borderGreen);
 }
